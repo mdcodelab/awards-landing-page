@@ -7,9 +7,12 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        zentry: ["zentry", "sans-serif"],
+        general: ["general", "sans-serif"],
+        circularWeb: ["circular-web", "sans-serif"],
+        robertMedium: ["robert-medium", "sans-serif"],
+        robertRegular: ["robert-regular", "sans-serif"],
       },
     },
   },
