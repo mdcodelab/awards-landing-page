@@ -267,7 +267,8 @@
 body {
   font-family: "General Sans", sans-serif;
   width: 100dvw;
-  background: #dfdff0;
+  background: linear-gradient(120deg, #5c2fa6 13.57%, #5a36c0 98.38%);
+  scroll-behavior: none;
   overflow-x: hidden;
 }
 
@@ -278,59 +279,60 @@ body {
   box-sizing: border-box;
 }
 
-nav {
+title {
+  font-size: max(2vw, 24px);
+  line-height: 1.1;
+  padding-bottom: .4em;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+}
+
+.text {
+  font-size: max(1vw, 15px);
+  line-height: 1.4;
+  overflow: hidden;
+  padding-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.accordions {
   display: flex;
-  justify-content: space around;
+  flex-direction: column;
   align-items: center;
-position: fixed;
-width: 100%;
-z-index: 99;
-margin-top: 20px;
+  justify-content: center;
+  padding-bottom: 20vh;
 }
 
-nav ul {
-  display: flex;
+.accordion {
+  background: linear-gradient(200deg, rgb(29, 145, 252) 13.57%, rgb(90, 54, 192) 98.38%);
+  width: max(50vw, 280px);
+  padding: 25px 30px 10px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, .3);
+  
+  &:nth-child(2) {
+    background: linear-gradient(200deg, rgb(242, 136, 133) 13.57%, rgb(233, 79, 102) 98.38%);
+  }
+  
+  &:nth-child(3) {
+    background: linear-gradient(200deg, rgb(101, 187, 118) 13.57%, rgb(70, 111, 171) 98.38%);
+  }
+  
+  &:nth-child(4) {
+    background: linear-gradient(200deg, #c215d1 13.57%, #9813a1 98.38%);
+  }
 }
 
-nav ul li {
-  list-style-type: none;
-  margin-left: 3rem;
-  font-size: 12px;
+.spacer {
+  height: 70vh;
 }
 
-.sidebar {
-  width: 30%;
-  height: 100vh;
-  background: lightgray;
-  position: fixed;
-  z-index: -1;
-  background: red;
-}
-
-.content-container {
-  display: flex;
-justify-content: center;
-flex-wrap: wrap;
-align-items: center;
-width: 100vh;
-}
-
-.main-title {
-  font-size: 3rem;
-  transform: rotate(90deg);
-  margin-top: 10rem;
-}
-
-.main-info {
-  transform: rotate(-90deg);
-  text-align: center;
-  width: 200px;
-  margin-bottom: 5rem;
-  margin-left: 7rem;
-}
-
-.main-img {
-  width: 40%;
-  margin-top: 2rem;
-  margin-left: 6rem;
+@media (max-width: 480px) {
+  .accordion {
+    padding: 15px 20px 8px;
+  }
+  .title {
+    font-size: 20px;
+  }
 }
