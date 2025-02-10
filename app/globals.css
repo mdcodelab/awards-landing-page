@@ -304,6 +304,7 @@ nav ul li {
   background: lightgray;
   position: fixed;
   z-index: -1;
+  background: red;
 }
 
 .content-container {

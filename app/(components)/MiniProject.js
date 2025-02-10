@@ -3,7 +3,7 @@ import React from 'react';
 import gsap from 'gsap';
 import { useEffect } from 'react';
 
-function Home() {
+function MiniProject() {
 
 useEffect(()=> {
 let tl=gsap.timeline({
@@ -51,4 +51,5 @@ tl.fromTo(".content", {x: 100}, {x: 0, opacity: 1})
   );
 }
 
-export default Home;
+export default MiniProject;
+"
